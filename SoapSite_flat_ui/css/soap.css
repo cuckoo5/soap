@@ -1,0 +1,86 @@
+body {
+	font-family : Tahoma, sans-serif, "Microsoft YaHei";
+}
+
+input, label, select, option, textarea, button, fieldset, legend {
+	font-family : Tahoma, sans-serif, "Microsoft YaHei";
+}
+
+.header-html{
+	
+}
+
+.foot-html{
+	clear : both;
+	float : left;
+	width : 100%;
+	background : #4E3F30;
+}
+
+.sidebar {
+	font-size : 14px;
+	line-height : 1.214;
+	height : 80%;
+	left : 0;
+	float : left;
+	list-style-type : none;
+	overflow : auto;
+	position : fixed;
+	/**margin: 0;
+	top: 0;
+	padding: 0;*/
+	width : 15%;
+	/*z-index : 10000;*/
+	background-color : #f3f4f5;
+	-webkit-backface-visibility : hidden;
+	-webkit-font-smoothing : subpixel-antialiased;
+}
+
+.sidebar ul{
+	list-style-type : none;
+}
+
+.sidebar li:first-child a {
+  	padding-top : 20px;
+}
+
+.sidebar li:last-child a {
+	padding-bottom : 20px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 5px 25px 5px 5px;
+}
+
+.oil_main{
+	float : left;
+	padding-left : 15%;
+	width : 85%;
+}
+
+.oil_header{
+	font-weight : bold;
+}
+
+.oil_content{
+	font-size : 14px;
+}
+
+.formula_main{
+	float : left;
+	padding-left : 15%;
+	width : 85%;
+}
+
+.formula_header{
+	font-weight : bold;
+}
+
+.formula_content{
+	font-size : 14px;
+}
+
+.formula_table{
+	border : 1px solid;
+}

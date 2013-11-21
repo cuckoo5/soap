@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>皂知道</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link href="css/soap.css" rel="stylesheet">
+	<!-- Loading Bootstrap -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+
+	<!-- Loading Flat UI -->
+	<link href="css/flat-ui.css" rel="stylesheet">
+	<link href="css/docs.css" rel="stylesheet">
+	<link  href="images/favicon.ico"rel="shortcut icon">
+	
+	<script src="js/jquery-2.0.3.min.js"></script>
+	<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-select.js"></script>
+	<script src="js/bootstrap-switch.js"></script>
+	<script src="js/flatui-checkbox.js"></script>
+	<script src="js/flatui-radio.js"></script>
+	<script src="js/jquery.tagsinput.js"></script>
+	<script src="js/jquery.placeholder.js"></script>
+	<script src="js/soap.js"></script>
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top header-html">
+		<script type="text/javascript">
+			$.get("html/include/header.html", function(data) {
+				$(".header-html").html(data);
+				$("li.m1").removeClass("m1").addClass("active");
+			});
+		</script>
+	</div>
+	<br /><br />
+	<div class="container">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel" style="width: 49%;float: left;">
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0"  class="" ></li>
+				<li data-target="#myCarousel" data-slide-to="1" class=""></li>
+				<li data-target="#myCarousel" data-slide-to="2" class="active"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="item">
+					<img src="http://www.see-source.com/bootstrap/demo/images/bootstrap-mdo-sfmoma-01.jpg" alt="">
+					<div class="carousel-caption">
+						<h4>First Thumbnail label</h4>
+						<p>
+							Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+						</p>
+					</div>
+				</div>
+				<div class="item">
+					<img src="http://www.see-source.com/bootstrap/demo/images/bootstrap-mdo-sfmoma-02.jpg" alt="">
+					<div class="carousel-caption">
+						<h4>Second Thumbnail label</h4>
+						<p>
+							Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+						</p>
+					</div>
+				</div>
+				<div class="item active">
+					<img src="http://www.see-source.com/bootstrap/demo/images/bootstrap-mdo-sfmoma-03.jpg" alt="">
+					<div class="carousel-caption">
+						<h4>Third Thumbnail label</h4>
+						<p>
+							Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+						</p>
+					</div>
+				</div>
+			</div>
+			<a class="left carousel-control" href="#myCarousel" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a>
+			<a class="right carousel-control" href="#myCarousel" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a>
+		</div>
+		<div class="panel panel-default" style="width : 49%;float : right">
+			<!-- Default panel contents -->
+			<div class="panel-heading">
+				Panel heading
+			</div>
+			<div class="panel-body">
+				<!-- Table -->
+				<table class="table">
+					<tr>
+						<td>aaa</td>
+					</tr>
+					<tr>
+						<td>aaa</td>
+					</tr>
+					<tr>
+						<td>aaa</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div style="clear: both;"><br /></div>
+		
+		<div class="panel panel-default" style="width: 49%;clear : both;float: left">
+			<!-- Default panel contents -->
+			<div class="panel-heading">
+				Panel heading
+			</div>
+			<div class="panel-body">
+				<p>xxx</p>
+			</div>
+
+			<!-- Table -->
+			<table class="table">
+				<tr>
+					<td>aaa</td>
+					<td>bbb</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="panel panel-default" style="width: 49%;float: right">
+			<!-- Default panel contents -->
+			<div class="panel-heading">
+				Panel heading
+			</div>
+			<div class="panel-body">
+				<p>xxx</p>
+			</div>
+
+			<!-- Table -->
+			<table class="table">
+				<tr>
+					<td>aaa</td>
+					<td>bb</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div>
+		<footer class="foot-html">
+			<script type="text/javascript">
+				$.get("html/include/foot.html",function(data){
+   					$(".foot-html").html(data);
+  				});
+			</script>
+		</footer>
+	</div>
+</body>
+</html>
+<script type="text/javascript"> 
+$('#myCarousel').carousel('next');
+</script>

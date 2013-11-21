@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>皂知道</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link href="../../css/soap.css" rel="stylesheet">
+	<!-- Loading Bootstrap -->
+	<link href="../../css/bootstrap.css" rel="stylesheet">
+
+	<!-- Loading Flat UI -->
+	<link href="../../css/flat-ui.css" rel="stylesheet">
+
+	<link rel="shortcut icon" href="../../images/favicon.ico">
+	<script src="../../js/jquery-2.0.3.min.js"></script>
+	<script src="../../js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script src="../../js/jquery.ui.touch-punch.min.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/bootstrap-select.js"></script>
+	<script src="../../js/bootstrap-switch.js"></script>
+	<script src="../../js/flatui-checkbox.js"></script>
+	<script src="../../js/flatui-radio.js"></script>
+	<script src="../../js/jquery.tagsinput.js"></script>
+	<script src="../../js/jquery.placeholder.js"></script>
+	<script src="../../js/soap.js"></script>
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top header-html">
+		<script type="text/javascript">
+			$.get("../include/header.html", function(data) {
+				$(".header-html").html(data);
+				$("li.m5").removeClass("m5").addClass("active");
+			});
+		</script>
+	</div>
+	<br /><br />
+
+	<div>
+		<div class="sidebar">
+			<ul>
+				<li><a href="#level_01">★☆☆☆☆新手配方</a></li>
+				<li><a href="#level_02">★★☆☆☆适合练手</a></li>
+				<li><a href="#level_03">★★★☆☆中等难度</a></li>
+				<li><a href="#level_04">★★★★☆高手配方</a></li>
+				<li><a href="#level_05">★★★★★制皂师配方</a></li>
+			</ul>
+		</div>
+		<div class="formula_main">
+			<div id="level_01" class="panel panel-default">
+				<div class="panel-heading formula_header">
+					花梨木滋润活肤皂
+				</div>
+				<table class="table formula_table">
+					<tr>
+						<td>配方名称</td>
+						<td>花梨木滋润活肤皂</td>
+						<td>配方功能</td>
+						<td>洁面、沐浴</td>
+					</tr>
+					<tr>
+						<td>配方功效</td>
+						<td>美白淡斑、补水保湿、滋润营养</td>
+						<td>适合肤质</td>
+						<td>中性肌肤、混合偏干肌肤</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div>
+		<footer class="foot-html">
+			<script type="text/javascript">
+				$.get("../include/foot.html",function(data){
+   					$(".foot-html").html(data);
+  				});
+			</script>
+		</footer>
+	</div>

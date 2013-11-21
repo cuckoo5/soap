@@ -1,0 +1,39 @@
+<div class="container">
+	<div class="navbar-header">
+		<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-collapse-01"></button>
+		<a class="navbar-brand" href="#">皂知道</a>
+	</div>
+	<div class="navbar-collapse collapse navbar-collapse-01">
+		<ul class="nav navbar-nav navbar-left">
+			<li class="m1"><a href="#" onclick="click_menu('/index.html')">首页</a></li>
+			<li class="m2"><a href="#" onclick="click_menu('')">手工皂常识</a></li>
+			<li class="m3"><a>制皂常识</a></li>
+			<!--<li class="m4"><a href="#" onclick="click_menu('/html/oil.html')">油脂介绍</a></li>-->
+			<li class="m4">
+				<a>油脂介绍</a>
+				<ul>
+					<li><a href="#" onclick="click_menu('/html/oil/persist.html')">保湿型油脂及其特性</a></li>
+					<li><a href="#" onclick="click_menu('/html/oil/solidity.html')">增加硬度的油脂及其特性</a></li>
+					<li><a href="#" onclick="click_menu('/html/oil/cleanlily.html')">清爽型油脂及其特性</a></li>
+				</ul>
+			</li>
+			<li class="m5">
+				<a>经典皂方</a>
+				<ul>
+					<li><a href="#" onclick="click_menu('/html/formula/operation.html')">按操作难度分类</a></li>
+					<li><a href="#" onclick="click_menu('/html/formula/function.html')">按功能分类</a></li>
+					<li><a href="#" onclick="click_menu('/html/formula/efficacy.html')">按功效分类</a></li>
+					<li><a href="#" onclick="click_menu('/html/formula/skin.html')">按肤质分类</a></li>
+				</ul>
+			</li>
+			<li class="m6"><a>自制皂方</a></li>
+			<li class="m7"><a>实践交流</a></li>
+		</ul>
+	</div>
+</div>
+<script>
+	function click_menu(relative_path){
+		window.location.href = http_path + relative_path;
+	}
+	
+</script>
