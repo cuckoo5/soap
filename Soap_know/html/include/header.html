@@ -1,0 +1,45 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-2 col-xs-2">
+			<h1 id="header-logo" class="image-text">
+				<a href="/">
+					<span class="mask"></span><span class="behind"></span> Soap Know <i class=""></i>
+				</a>
+			</h1>
+		</div>
+		<div class="col-md-6 col-xs-6">
+			<nav id="top-nav">
+				<ul class="nav-list transistion">
+					<li>
+						<a class="active" href="/">首页</a>
+					</li>
+					<li>
+						<a href="/channel/index">频道</a>
+					</li>
+					<li>
+						<a href="/formula/index">配方</a>
+					</li>
+					<li>
+						<a href="/market/index">集市</a>
+					</li>
+					<li>
+						<a href="/community/index">社区</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div>
+			<ul class="login_ul transistion">
+				{% if not cur_user %}
+				<li><a href="/login">登录</a></li>
+				<li class="split">&nbsp;|&nbsp;</li>
+				<li><a href="/register">注册</a></li>
+				{% else %}
+				<li><a href="/user/user">{{cur_user}}</a></li>
+				<li class="split">&nbsp;|&nbsp;</li>
+				<li><a href="/logout">注销</a></li>
+				{% end %}
+			</ul>
+		</div>
+	</div>
+</div>

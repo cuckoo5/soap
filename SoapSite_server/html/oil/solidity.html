@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>{{title}}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link href="../../static/css/soap.css" rel="stylesheet">
+	<!-- Loading Bootstrap -->
+	<link href="../../static/css/bootstrap.css" rel="stylesheet">
+
+	<!-- Loading Flat UI -->
+	<link href="../../static/css/flat-ui.css" rel="stylesheet">
+
+	<link rel="shortcut icon" href="../../static/images/favicon.ico">
+	<script src="../../static/js/jquery-2.0.3.min.js"></script>
+	<script src="../../static/js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script src="../../static/js/jquery.ui.touch-punch.min.js"></script>
+	<script src="../../static/js/bootstrap.min.js"></script>
+	<script src="../../static/js/bootstrap-select.js"></script>
+	<script src="../../static/js/bootstrap-switch.js"></script>
+	<script src="../../static/js/flatui-checkbox.js"></script>
+	<script src="../../static/js/flatui-radio.js"></script>
+	<script src="../../static/js/jquery.tagsinput.js"></script>
+	<script src="../../static/js/jquery.placeholder.js"></script>
+	<script src="../../static/js/soap.js"></script>
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+	<!--[if lt IE 9]>
+	<script src="../../static/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top header-html">
+		{% include '../include/header.html' %}
+		<!-- <script type="text/javascript">
+			$.get("../include/header.html", function(data) {
+				$(".header-html").html(data);
+				$("li.m4").removeClass("m4").addClass("active");
+			});
+		</script> -->
+	</div>
+	<br /><br />
+
+	<div>
+		<div class="sidebar affix">
+			<ul>
+				<li><a href="#olive_oil">橄榄油</a></li>
+				<li><a href="#hazelnut_oil">榛果油</a></li>
+				<li><a href="#sweet_almond_oil">甜杏仁油</a></li>
+				<li><a href="#avocado_oil">酪梨油</a></li>
+				<li><a href="#camellia_oil">山茶花油</a></li>
+				<li><a href="#oiltea_camelina_oil">茶花籽油</a></li>
+				<li><a href="#macadamia_nut_oil">澳洲坚果油</a></li>
+				<li><a href="#safflower_oil ">红花油</a></li>
+			</ul>
+		</div>
+		<div class="oil_main">
+			<div id="olive_oil" class="panel panel-default">
+				<div class="panel-heading oil_header">
+					橄榄油  -- Olive Oil
+				</div>
+				<div class="panel-body oil_content">
+					橄榄油含有丰富的维他命A、D、E、矿物质、蛋白质，可以保湿并修护皮肤，减少皮肤水份流失，防老化。制造出的香皂泡沫持久且如奶油般细致，由于深具滋润性，也很适合用来制作干性发质适用的洗发皂和婴儿皂。
+				</div>
+			</div>
+			<div id="hazelnut_oil" class="panel panel-default">
+				<div class="panel-heading oil_header">
+					榛果油 -- Hazelnut Oil
+				</div>
+				<div class="panel-body oil_content">
+					榛果油含丰富的矿物质，保湿力强，有助于皮肤的再生。渗透性极佳，对各种精油溶解度高，稍微渗入皮肤的表层，就可强化皮肤毛细管，促使细胞更新。榛果油容易吸收且具轻微的收敛性，榛果油收敛毛孔及净化效果很好，非常适合油性、痤疮及混合性皮肤，维他命E容易吸收，可直接作为基础按摩油并适合全身按摩使用。
+				</div>
+			</div>
+			<div id="sweet_almond_oil" class="panel panel-default">
+				<div class="panel-heading oil_header">
+					甜杏仁油 -- Sweet Almond Oil
+				</div>
+				<div class="panel-body oil_content">
+					甜杏仁油是一种质地轻柔、高渗透性的天然保湿剂，温和又具有良好的亲肤性，各种肤质都适用，滋润皮肤与软化肤质功效良好，适合做全身按摩。可与任何植物油相互调和，是很好的混合油。很适合干性、皱纹、粉刺、面疱及容易过敏发痒的敏感性肌肤，用甜杏仁油做出来的皂泡沫持久且保湿效果非常好。
+				</div>
+			</div>
+			<div id="avocado_oil" class="panel panel-default">
+				<div class="panel-heading oil_header">
+					酪梨油 -- Avocado Oil
+				</div>
+				<div class="panel-body oil_content">
+					酪梨油非常容易让皮肤吸收。最适用于干燥缺水、日照受损或成熟肌肤。营养度极高，其深层清洁效果佳，能促进新陈代谢、淡化黑斑、预防皱纹产生。酪梨油是制作手工皂的高级素材，做出来的皂很滋润，有软化及治愈皮肤的功能，能制造出对皮肤非常温和的香皂，很适合婴儿及过敏性皮肤的人使用。
+				</div>
+			</div>
+			<div id="camellia_oil" class="panel panel-default">
+				<div class="panel-heading oil_header">
+					山茶花油 -- Camellia Oil
+				</div>
+				<div class="panel-body oil_content">
+					山茶花油也称为椿油，含有丰富之蛋白质、维生素A、E等, 其营养价值可与橄榄油相媲美，具有高抗氧化物质，让皮肤头发处于良好状态，能让肌肤调整并保湿，渗透性快，能使用于全身肌肤它又能在表皮上形成一层很薄的保护膜，保住皮肤内的水份，防护紫外线与空气污浊对肌肤的损伤。
+				</div>
+			</div>
+			<div id="oiltea_camelina_oil" class="panel panel-default">
+				<div class="panel-heading oil_header">
+					茶花籽油 -- Oiltea Camelina Oil
+				</div>
+				<div class="panel-body oil_content">
+					茶花籽油也称为苦茶油，油酸比例高，组成份近似橄榄油，能制作出和橄榄油外表及使用感非常类似的皂。但比橄榄油更耐用又安定，起泡性只比橄榄油好一点点，做成洗发皂，洗后能使头发清爽、柔顺又有弹性。 
+				</div>
+			</div>
+			<div id="macadamia_nut_oil" class="panel panel-default">
+				<div class="panel-heading oil_header">
+					澳洲坚果油 -- Macadamia Nut Oil
+				</div>
+				<div class="panel-body oil_content">
+					澳洲坚果油也称为澳洲胡桃油，和荷荷芭油特性相似，成分类似皮肤的油脂。保湿效果良好，减缓细纹产生，适合成熟型肌肤按摩使用，对皮肤的渗透性佳。主要成分是油酸和棕榈油酸，不易氧化，适合作高级洗脸皂或受损发质洗发皂。起泡力比橄榄油好，洗完后感觉滋润，比橄榄油清爽柔和。建议用量20%。
+				</div>
+			</div>
+			<div id="sofflower_oil" class="panel panel-default">
+				<div class="panel-heading oil_header">
+					红花油 -- Safflower Oil
+				</div>
+				<div class="panel-body oil_content">
+					红花油含油酸80%左右，亚油酸15%左右，因此做成肥皂兼具油酸的保湿力及亚油酸的起泡性和清爽感，几乎和橄榄油一样，但棕榈酸及硬脂酸极少，因此入模时间久且INS比例偏低。
+				</div>
+			</div>
+		</div>
+	</div>
+	<div>
+		<footer class="foot-html">
+			{% include '../include/foot.html' %}
+			<!-- <script type="text/javascript">
+				$.get("../include/foot.html",function(data){
+   					$(".foot-html").html(data);
+  				});
+			</script> -->
+		</footer>
+	</div>
+</body>
+</html>
