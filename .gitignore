@@ -4,3 +4,4 @@
 *.jar
 *.war
 *.ear
+SoapSite_server/main.py
