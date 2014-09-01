@@ -1,0 +1,70 @@
+<div id="register_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="register_modal_label" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title" id="register_modal_label">加入皂知道</h4>
+			</div>
+			<div class="modal-body">
+				<div class="register_panel_left">
+					<!-- <div id="login-alert" class="alert alert-danger col-sm-12" style="display:none"></div> -->
+					<div id="register-alert" class="alert alert-danger alert-dismissible col-sm-12" role="alert" style="display: none;">
+						<button type="button" class="close" data-dismiss="alert">&times;</button>
+						<span id="error-message"></span>
+					</div>
+					<form id="registerform" class="form-horizontal" role="form" action="/register" method="POST">
+						<!-- {{ xsrf_form_html() }} -->
+						<div style="margin-bottom: 25px" class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+							<input id="username" type="text" class="form-control" name="username" value="" placeholder="用户名">
+							<span class="input-group-addon"><label class="control-label" style="color: red;" for="userName">*</label></span>
+						</div>
+						<div style="margin-bottom: 25px" class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+							<input id="email" type="text" class="form-control" name="email" value="" placeholder="邮箱">
+							<span class="input-group-addon"><label class="control-label" style="color: red;" for="userName">*</label></span>
+						</div>
+						<div style="margin-bottom: 25px" class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+							<input id="password" type="password" class="form-control" name="password" placeholder="密码">
+							<!-- <input id="password" type="password" class="form-control" name="password" placeholder="密码" data-validation-minlength-message="密码至少6位" data-validation-required-message="请输入密码" minlength="6" required="" aria-invalid="true"> -->
+							<span class="input-group-addon"><label class="control-label" style="color: red;" for="userName">*</label></span>
+						</div>
+						<div style="margin-bottom: 25px" class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+							<input id="confirm_password" type="password" class="form-control" name="confirm_password" placeholder="确认密码">
+							<span class="input-group-addon"><label class="control-label" style="color: red;" for="userName">*</label></span>
+						</div>
+						<div style="margin-top:10px;" class="form-group">
+							<div class="col-sm-12 controls" style="margin:0 auto;">
+								<!-- <a id="btn-login" href="#" class="btn btn-success" type="submit">登录 </a> -->
+								<button id="btn-register" class="btn btn-success" type="button" onclick="register()">确定</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="register_panel_right">
+					<div>
+						<p style="font-size: 14px; color: #45b29a;">无需注册，直接使用以下帐号登录</p>
+						<a class="qq_login">QQ账号</a>
+						<a class="sina_login">新浪账号</a>
+						<br />
+						<br />
+						<br />
+						<hr />
+						<br />
+						<!-- <p style="font-size: 14px; color: #45b29a;">已有账号，请<a href="/login">登录</a></p> -->
+						<p style="font-size: 14px; color: #45b29a;">已有账号，请<a onclick="login_from_register()">登录</a></p>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="modal-footer">
+				<button type="submit" class="btn btn-default" data-dismiss="modal" onclick="login()">
+					登录
+				</button>
+			</div> -->
+		</div>
+	</div>
+</div>

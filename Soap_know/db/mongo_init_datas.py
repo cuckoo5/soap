@@ -15,10 +15,10 @@ tb_essential_oil_usage = 'essential_oil_usage'
 
 tables = {
     tb_user : [
-        {'id' : '',}
+        {'user_id' : 1, 'name' : 'admin', 'password' : '', 'email' : 'cuckoo5@sina.cn', 'create_date' : '', 'last_login_date' : None, 'online_status' : 0}
     ],
     tb_user_base : [
-        {'user_id' : ''}
+        {'user_id' : 1, }
     ],
     tb_formula_type : [
         {'name' : '操作难度'}, {'name' : '功能'}, {'name' : '功效'}, {'name' : '适合肤质'}
@@ -113,12 +113,12 @@ tables = {
           
     #油脂：名称、英文名称、皂化价(NaOH)、皂化价(KOH)、INS、是否可用于超脂、建议用量
     tb_oil : [
-        {'name' : '', 'name_en' : '', 'naoh' : 0, 'koh' : 0, 'ins' : 0, 'super_fatting' : False, 'suggested_usage' :  0},
+        {'name' : '', 'name_en' : '', 'naoh' : 0, 'koh' : 0, 'ins' : 0, 'super_fatting' : False, 'suggested_usage' :  ''},
         {}
     ]
 }
 
-def init_datas():
+def init_all_datas():
     client = MongoClient(config.uri, config.port)
     db = client[config.db_name]
     for (tb_name, datas) in tables.items():
@@ -127,5 +127,12 @@ def init_datas():
             ids = table.insert(datas)
             print 'ids = ', ids
 
+def init_table(tb_name):
+    client = MongoClient(config.uri, config.port)
+    db = client[config.db_name]
+    table = db[tb_name]
+    datas = tables[tb_name]
+    table.insert(datas)
+
 if __name__ == '__main__':
-    init_datas()
+    init_all_datas()

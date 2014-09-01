@@ -16,73 +16,34 @@
 	<meta name="keywords" content="sean, halpin, sean halpin, web design, graphic design, websites, graphics, illustration, freelance, developer" />
 	<meta name="robots" content="index, follow" />
 
-	<meta name="msapplication-TileImage" content="/static/images/144.png">
+	<meta name="msapplication-TileImage" content="{{ static_url('images/144.png') }}">
 	<meta name="msapplication-TileColor" content="#E0EBE8">
 
-	<link rel="shortcut icon" href="/static/images/favicon.ico">
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/images/144.png">
-	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/static/images/120.png">
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/images/72.png">
-	<link rel="apple-touch-icon-precomposed" href="/static/images/57.png">
-	<link rel="icon" type="image/png" href="/static/images/favicon.png">
+	<link rel="shortcut icon" href="{{ static_url('images/favicon.ico') }}">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ static_url('images/144.png') }}">
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ static_url('images/120.png') }}">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ static_url('images/72.png') }}">
+	<link rel="apple-touch-icon-precomposed" href="{{ static_url('images/57.png') }}">
+	<link rel="icon" type="image/png" href="{{ static_url('images/favicon.png') }}/">
 
-	<link rel="stylesheet" href="/static/css/bootstrap.css" />
-	<link rel="stylesheet" href="/static/css/soap.css" />
+	<link rel="stylesheet" href="{{ static_url('css/bootstrap.css') }}" />
+	<link rel="stylesheet" href="{{ static_url('css/soap.css') }}" />
 
 	<!--<script type="text/javascript" src="//use.typekit.net/wdj6cpr.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>-->
 
-	<script src="/static/js/respond.min.js"></script>
-	<script src="/static/js/modernizr.js"></script>
+	<script src="{{ static_url('js/respond.min.js') }}"></script>
+	<script src="{{ static_url('js/modernizr.js') }}"></script>
 </head>
-<body class="">
-	<section id="top">
-		<header id="home-top" class="nav-top nav-fixed nav-root">
-			{% include 'include/header.html' %}
-		</header>
-		<div class="masthead-wrap">
-			<div id="title">
-				<div class="container">
-					<div class="transistion cloud left-cloud"></div>
-					<div class="transistion cloud right-cloud"></div>
-					<div class="row">
-						<div class="col-md-12">
-							<div id="head-slider" class="transistion">
-								<div class="slide-contents">
-									<div class="slide">
-										<h2 class="im-sean">
-											<figure class="transistion">
-												<img src="/static/images/im-sean.svg">
-											</figure>
-										</h2>
-										<p class="header-desc">
-											a web designer.
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- /col 24 -->
-					</div>
-					<!-- /row -->
-				</div>
-			</div>
-		</div>
-		<div class="masthead-wrap">
-			<div id="masthead">
-				<div id="earth-holder">
-					<img src="/static/images/land.svg">
-				</div>
-			</div>
-		</div>
-	</section>
+<body>
+	{% include 'include/header.html' %}
 	<section id="hello">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
 					<article>
 						<figure>
-							<img src="/static/images/me.svg" >
+							<img src="{{ static_url('images/me.svg') }}" >
 						</figure>
 						<h3>Hi.</h3>
 						<p>
@@ -114,7 +75,7 @@
 							<div class="col-md-4 col-md-offset-1">
 								<div class="home-design-info">
 									<figure>
-										<img src="/static/images/me.svg">
+										<img src="{{ static_url('images/me.svg') }}">
 									</figure>
 									<div class="bubble right">
 										<div class="bubbling-design-icons-vert"></div>
@@ -136,7 +97,7 @@
 							<div class="col-md-4 col-md-push-7">
 								<div class="home-dev-info">
 									<figure>
-										<img src="/static/images/me-dev.svg">
+										<img src="{{ static_url('images/me-dev.svg') }}">
 									</figure>
 									<div class="bubble left">
 										<div class="bubbling-dev-icons-vert"></div>

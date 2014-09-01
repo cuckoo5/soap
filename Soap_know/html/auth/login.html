@@ -16,27 +16,27 @@
 	<meta name="keywords" content="sean, halpin, sean halpin, web design, graphic design, websites, graphics, illustration, freelance, developer" />
 	<meta name="robots" content="index, follow" />
 
-	<meta name="msapplication-TileImage" content="/static/images/144.png">
+	<meta name="msapplication-TileImage" content="{{ static_url('images/144.png') }}">
 	<meta name="msapplication-TileColor" content="#E0EBE8">
 
-	<link rel="shortcut icon" href="/static/images/favicon.ico">
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/images/144.png">
-	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/static/images/120.png">
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/images/72.png">
-	<link rel="apple-touch-icon-precomposed" href="/static/images/57.png">
-	<link rel="icon" type="image/png" href="/static/images/favicon.png">
+	<link rel="shortcut icon" href="{{ static_url('images/favicon.ico') }}">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ static_url('images/144.png') }}">
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ static_url('images/120.png') }}">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ static_url('images/72.png') }}">
+	<link rel="apple-touch-icon-precomposed" href="{{ static_url('images/57.png') }}">
+	<link rel="icon" type="image/png" href="{{ static_url('images/favicon.png') }}/">
 
-	<link rel="stylesheet" href="/static/css/bootstrap.css" />
-	<link rel="stylesheet" href="/static/css/soap.css" />
+	<link rel="stylesheet" href="{{ static_url('css/bootstrap.css') }}" />
+	<link rel="stylesheet" href="{{ static_url('css/soap.css') }}" />
+	<link rel="stylesheet" href="{{ static_url('css/auth.css') }}" />
 	
 	<!--<script type="text/javascript" src="//use.typekit.net/wdj6cpr.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>-->
-
-	<script src="/static/js/respond.min.js"></script>
-	<script src="/static/js/modernizr.js"></script>
-	<script src="/static/js/auth.js"></script>
+	<script src="{{ static_url('js/respond.min.js') }}"></script>
+	<script src="{{ static_url('js/modernizr.js') }}"></script>
+	<script src="{{ static_url('js/auth.js') }}"></script>
 </head>
-<body class="">
+<body>
 	<section id="top">
 		<header id="home-top" class="nav-top nav-fixed nav-root">
 			<div class="container">
@@ -54,10 +54,10 @@
 	</section>
 	<section>
 		<div class="container">
-			<div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+			<div id="loginbox" style="margin-top:50px;" class="mainbox col-md-10 col-md-offset-1 col-sm-8 col-sm-offset-2">
 				<div class="panel panel-info" style="border-color: #e0ebe8">
 					<div class="panel-heading" style="background-color: #e0ebe8;border-color: #e0ebe8">
-						<div class="panel-title">
+						<div class="panel-title" style="text-align: center">
 							登录
 						</div>
 						<div style="float:right; font-size: 80%; position: relative; top:-10px">
@@ -65,51 +65,85 @@
 						</div>
 					</div>
 					<div class="panel-body" style="padding-top:30px;border-color: #e0ebe8" >
-						<!-- <div id="login-alert" class="alert alert-danger col-sm-12" style="display:none"></div> -->
-						<div id="login-alert" class="alert alert-danger alert-dismissible col-sm-12" role="alert" style="display: none;">
-							<button type="button" class="close" data-dismiss="alert">&times;</button>
-							<span id="error-message"></span>
-						</div>
-						<form id="loginform" class="form-horizontal" role="form" action="/login" method="POST">
-							<div style="margin-bottom: 25px" class="input-group">
-								<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-								<input id="username" type="text" class="form-control" name="username" value="" placeholder="手机/邮箱/用户名">
+						<div class="login_panel_left">
+							<!-- <div id="login-alert" class="alert alert-danger col-sm-12" style="display:none"></div> -->
+							<div id="login-alert" class="alert alert-danger alert-dismissible col-sm-12" role="alert" style="display: none;">
+								<button type="button" class="close" data-dismiss="alert">&times;</button>
+								<span id="error-message"></span>
 							</div>
-							<div style="margin-bottom: 25px" class="input-group">
-								<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-								<input id="password" type="password" class="form-control" name="password" placeholder="密码">
-							</div>
-							<div class="input-group">
-								<div class="checkbox">
-									<label>
-										<input id="login-remember" type="checkbox" name="remember" value="1">
-										Remember me
-									</label>
+							<form id="loginform" class="form-horizontal" role="form" action="/login" method="POST">
+								<!-- {{ xsrf_form_html() }} -->
+								<div style="margin-bottom: 25px" class="input-group">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+									<input id="username" type="text" class="form-control" name="username" value="" placeholder="手机/邮箱/用户名" required pattern="^[0-9,]+$" data-validation-required-message="请输入用户名" aria-invalid="true">
 								</div>
-							</div>
-
-							<div style="margin-top:10px" class="form-group">
-								<div class="col-sm-12 controls">
-									<!-- <a id="btn-login" href="#" class="btn btn-success" type="submit">登录 </a> -->
-									<button id="btn-login" class="btn btn-success" type="button" onclick="login()">登录</button>
-									<a id="btn-fblogin" href="#" class="btn btn-primary">Login with Facebook</a>
+								<div style="margin-bottom: 25px" class="input-group">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+									<input id="password" type="password" class="form-control" name="password" placeholder="密码">
 								</div>
-							</div>
-
-							<div class="form-group">
-								<div class="col-md-12 control">
-									<div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
-										Don't have an account!
-										<a href="/register"> Sign Up Here </a>
+								<!-- <div class="input-group"> -->
+									<!-- <span class="input-group-addon">
+										<input type="checkbox">
+									</span>
+									<input type="text" class="form-control" name="remember" placeholder="下次自动登录"> -->
+									<!-- or -->
+									<!-- <div class="checkbox">
+										<label>
+											<input id="login-remember" type="checkbox" name="remember" value="1">
+											<span style="font-size: 14px; color: #45b29a;">下次自动登录</span>
+										</label>
+									</div> -->
+								<!-- </div> -->
+	
+								<div style="margin-top:10px" class="form-group">
+									<div class="col-sm-12 controls">
+										<!-- <a id="btn-login" href="#" class="btn btn-success" type="submit">登录 </a> -->
+										<button id="btn-login" class="btn btn-success" type="button" onclick="login()">登录</button>
+										<!-- <a id="btn-fblogin" href="#" class="btn btn-primary">Login with Facebook</a> -->
 									</div>
 								</div>
+							</form>
+						</div>
+						<div class="login_panel_right">
+							<div>
+								<p style="font-size: 14px; color: #45b29a;">直接使用以下帐号登录</p>
+								<a class="qq_login">QQ账号</a>
+								<a class="sina_login">新浪账号</a>
+								<br />
+								<br />
+								<br />
+								<hr />
+								<br />
+								<p style="font-size: 14px; color: #45b29a;">还没有账号？马上<a href="/register">注册</a></p>
 							</div>
-						</form>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 	{% include '../include/foot.html' %}
+
+
+	<!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						&times;
+					</button>
+					<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+				</div>
+				<div class="modal-body">
+					One fine body&hellip;
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">
+						关闭
+					</button>
+				</div>
+			</div>
+		</div>
+	</div> -->
 </body>
 </html>

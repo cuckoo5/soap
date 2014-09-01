@@ -1,45 +1,52 @@
-<div class="container">
-	<div class="row">
-		<div class="col-md-2 col-xs-2">
-			<h1 id="header-logo" class="image-text">
-				<a href="/">
-					<span class="mask"></span><span class="behind"></span> Soap Know <i class=""></i>
-				</a>
-			</h1>
+<section id="top">
+	<header id="home-top" class="nav-top nav-fixed nav-root">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2 col-xs-2">
+					<h1 id="header-logo" class="image-text">
+						<a href="/">
+							<span class="mask"></span><span class="behind"></span> Soap Know <i class=""></i>
+						</a>
+					</h1>
+				</div>
+				<div class="col-md-6 col-xs-6">
+					<nav id="top-nav">
+						<ul class="nav-list transistion">
+							<li class="header-index">
+								<a href="/">首页</a>
+							</li>
+							<li class="header-channel">
+								<a href="/channel/index">频道</a>
+							</li>
+							<li class="header-formula">
+								<a href="/formula/index">配方</a>
+							</li>
+							<li class="header-market">
+								<a href="/market/index">集市</a>
+							</li>
+							<li class="header-community">
+								<a href="/community/index">社区</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div>
+					<ul class="login_ul transistion">
+						{% if not cur_user %}
+						<!-- <li><a href="/login">登录</a></li> -->
+						<li><a onclick="open_login_modal()">登录</a></li>
+						<li class="split">&nbsp;|&nbsp;</li>
+						<li><a href="/register">注册</a></li>
+						{% else %}
+						<li><a href="/user/user">{{cur_user['user_name']}}</a></li>
+						<li class="split">&nbsp;|&nbsp;</li>
+						<!-- <li><a href="/logout">注销</a></li> -->
+						<li><a onclick="logout()">注销</a></li>
+						{% end %}
+					</ul>
+				</div>
+			</div>
 		</div>
-		<div class="col-md-6 col-xs-6">
-			<nav id="top-nav">
-				<ul class="nav-list transistion">
-					<li>
-						<a class="active" href="/">首页</a>
-					</li>
-					<li>
-						<a href="/channel/index">频道</a>
-					</li>
-					<li>
-						<a href="/formula/index">配方</a>
-					</li>
-					<li>
-						<a href="/market/index">集市</a>
-					</li>
-					<li>
-						<a href="/community/index">社区</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
-		<div>
-			<ul class="login_ul transistion">
-				{% if not cur_user %}
-				<li><a href="/login">登录</a></li>
-				<li class="split">&nbsp;|&nbsp;</li>
-				<li><a href="/register">注册</a></li>
-				{% else %}
-				<li><a href="/user/user">{{cur_user}}</a></li>
-				<li class="split">&nbsp;|&nbsp;</li>
-				<li><a href="/logout">注销</a></li>
-				{% end %}
-			</ul>
-		</div>
-	</div>
-</div>
+	</header>
+</section>
+{% include '../auth/login_modal.html' %}

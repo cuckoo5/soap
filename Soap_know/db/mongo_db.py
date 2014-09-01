@@ -3,7 +3,7 @@
 from pymongo import MongoClient
 
 import db_config as config
-import mongo_init_datas as init_datas
+import mongo_init_datas as init_all_datas
 
 class MongoDB:
 
@@ -49,6 +49,6 @@ class MongoDB:
 if __name__ == '__main__':
     mongo = MongoDB()
     mongo.tables()
-    mongo.query(init_datas.tb_formula_type)
-    mongo.query(init_datas.tb_skin_type)
+    mongo.query(init_all_datas.tb_formula_type)
+    mongo.query(init_all_datas.tb_skin_type)
 

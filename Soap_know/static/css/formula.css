@@ -1,4 +1,30 @@
-button {
+.oil_btn {
 	background: #e0ebe8;
 	color: #45b29a;
 }
+
+.left-col {
+    float: left;
+    padding-right: 20px;
+    width: 70%;
+}
+.right-col {
+    float: left;
+    padding-left: 20px;
+    width: 30%;
+}
+
+a.huanhang {
+	text-decoration: none;
+}
+a.huanhang div {
+	display: none;
+	border: 1px solid #000;
+	text-decoration: none;
+	color: #000;
+	position: absolute;
+	left: 100px;
+}
+a.huanhang:hover div {
+	display: block;
+} 

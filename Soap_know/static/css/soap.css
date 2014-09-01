@@ -42,6 +42,69 @@
 /*@media (min-width: 992px) {
 	.login_ul li a {
 		font-size: 100%;
-		/*margin: 0 0 0 2em*/
 	}
 }*/
+.register_panel_left {
+	border-right: 1px solid #e0ebe8;
+	margin-right: -1px;
+	padding-right: 10px;
+	width: 65%;
+	clear: both;
+	float: left
+}
+
+.register_panel_right {
+	padding-left: 10px;
+	width: 35%;
+	float: right
+}
+
+.login_panel_left {
+	border-right: 1px solid #e0ebe8;
+	margin-right: -1px;
+	padding-right: 10px;
+	width: 50%;
+	clear: both;
+	float: left
+}
+
+.login_panel_right {
+	padding-left: 10px;
+	width: 50%;
+	float: right
+}
+
+.qq_login {
+	background: url('../images/qq_login.gif') no-repeat scroll 0 0 transparent;
+	width: 52px;
+	height: 52px;
+	text-align: center;
+	color: #45b29a;
+	padding: 34px 0px 0px;
+	position: relative;
+	top: 50px;
+	left: 50px;
+	cursor: pointer;
+}
+
+.qq_login:hover {
+    background: url('../images/qq_login_hover.gif') no-repeat scroll 0% 0% transparent;
+}
+
+.sina_login {
+	background: url('../images/sina_login.gif') no-repeat scroll 0 0 transparent;
+	width: 52px;
+	height: 52px;
+	text-align: center;
+	color: #45b29a;
+	padding: 34px 0px 0px;
+	position: relative;
+	top: 50px;
+	left: 80px;
+	cursor: pointer;
+}
+
+.sina_login:hover {
+    background: url('../images/sina_login_hover.gif') no-repeat scroll 0% 0% transparent;
+}
+

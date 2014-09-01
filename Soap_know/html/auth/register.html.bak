@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="" lang="en">
+<!--<![endif]-->
+<head>
+	<title>{{title}}</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<meta name="description" content="The portfolio of Sean Halpin, an Irish Web Designer based in Toronto, Canada." />
+	<meta name="keywords" content="sean, halpin, sean halpin, web design, graphic design, websites, graphics, illustration, freelance, developer" />
+	<meta name="robots" content="index, follow" />
+
+	<meta name="msapplication-TileImage" content="{{ static_url('images/144.png') }}">
+	<meta name="msapplication-TileColor" content="#E0EBE8">
+
+	<link rel="shortcut icon" href="{{ static_url('images/favicon.ico') }}">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ static_url('images/144.png') }}">
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ static_url('images/120.png') }}">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ static_url('images/72.png') }}">
+	<link rel="apple-touch-icon-precomposed" href="{{ static_url('images/57.png') }}">
+	<link rel="icon" type="image/png" href="{{ static_url('images/favicon.png') }}/">
+
+	<link rel="stylesheet" href="{{ static_url('css/bootstrap.css') }}" />
+	<link rel="stylesheet" href="{{ static_url('css/soap.css') }}" />
+	
+	<!--<script type="text/javascript" src="//use.typekit.net/wdj6cpr.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>-->
+
+	<script src="{{ static_url('js/respond.min.js') }}"></script>
+	<script src="{{ static_url('js/modernizr.js') }}"></script>
+	<script src="{{ static_url('js/auth.js') }}"></script>
+</head>
+<body class="">
+	<section id="top">
+		<header id="home-top" class="nav-top nav-fixed nav-root">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2 col-xs-2">
+						<h1 id="header-logo" class="image-text">
+							<a href="/">
+								<span class="mask"></span><span class="behind"></span> Soap Know <i class=""></i>
+							</a>
+						</h1>
+					</div>
+				</div>
+			</div>
+		</header>
+	</section>
+	<section>
+		<div class="container">
+			<div id="signupbox" style="margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+				<div class="panel panel-info" style="border-color: #e0ebe8">
+					<div class="panel-heading" style="background-color: #e0ebe8;border-color: #e0ebe8">
+						<div class="panel-title">
+							注册
+						</div>
+						<div style="float:right; font-size: 85%; position: relative; top:-10px">
+							<a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">Sign In</a>
+						</div>
+					</div>
+					<div style="padding-top:30px;border-color: #e0ebe8" class="panel-body" >
+						<form id="signupform" class="form-horizontal" role="form">
+
+							<div id="signupalert" style="display:none" class="alert alert-danger">
+								<p>
+									Error:
+								</p>
+								<span></span>
+							</div>
+
+							<div class="form-group">
+								<label for="nickname" class="col-md-3 control-label">昵称</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control" name="nickname" placeholder="昵称">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="email" class="col-md-3 control-label">Email</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control" name="email" placeholder="Email Address">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="lastname" class="col-md-3 control-label">Last Name</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control" name="lastname" placeholder="Last Name">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="password" class="col-md-3 control-label">Password</label>
+								<div class="col-md-9">
+									<input type="password" class="form-control" name="passwd" placeholder="Password">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="icode" class="col-md-3 control-label">Invitation Code</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control" name="icode" placeholder="">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<!-- Button -->
+								<div class="col-md-offset-3 col-md-9">
+									<a id="btn-signup" href="#" class="btn btn-success">注册 </a>
+									<!-- <button id="btn-signup" type="button" class="btn btn-info">
+										<i class="icon-hand-right"></i> &nbsp Sign Up
+									</button>
+									<span style="margin-left:8px;">or</span> -->
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-md-12 control">
+									<div style="border-top: 1px solid #e0ebe8; padding-top:15px; font-size:85%" >
+									<button id="btn-fbsignup" type="button" class="btn btn-primary">
+										<i class="icon-facebook"></i> Sign Up with Facebook
+									</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	{% include '../include/foot.html' %}
+</body>
+</html>

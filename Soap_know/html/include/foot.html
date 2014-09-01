@@ -31,19 +31,20 @@
 		</div>
 	</div>
 </footer>
-<script src="/static/js/jquery-1.10.2.min.js"></script>
+<script src="{{ static_url('js/jquery-1.10.2.min.js') }}"></script>
 <script>
 	window.jQuery || document.write('<script src="static/js/jquery-1.10.2.min.js"><\/script>')
 </script>
-<script src="/static/js/bootstrap.js"></script>
-<script src="/static/js/jquery.lazyload.min.js"></script>
-<script src="/static/js/jquery.scrollTo.min.js"></script>
-<script src="/static/js/jquery.history.js"></script>
-<script src="/static/js/ajaxify-html5.js"></script>
-<script src="/static/js/init.js"></script>
-<script src="/static/js/soap.js"></script>
-
-<script>
+<script src="{{ static_url('js/bootstrap.js') }}"></script>
+<script src="{{ static_url('js/jquery.validate.js') }}"></script>
+<script src="{{ static_url('js/jquery.lazyload.min.js') }}"></script>
+<script src="{{ static_url('js/jquery.scrollTo.min.js') }}"></script>
+<script src="{{ static_url('js/jquery.history.js') }}"></script>
+<script src="{{ static_url('js/ajaxify-html5.js') }}"></script>
+<script src="{{ static_url('js/init.js') }}"></script>
+<script src="{{ static_url('js/soap.js') }}"></script>
+<script src="{{ static_url('js/auth.js') }}"></script>
+<!-- <script>
 	(function(i, s, o, g, r, a, m) {
 		i['GoogleAnalyticsObject'] = r;
 		i[r] = i[r] ||
@@ -58,4 +59,4 @@
 
 	ga('create', 'UA-45121803-1', 'seanhalpin.io');
 	ga('send', 'pageview');
-</script>
+</script> -->
